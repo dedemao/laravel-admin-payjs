@@ -45,3 +45,14 @@ http://yourname/index?out_trade_no=123456&total_fee=0.01&subject=测试&pay_chan
 
 ### 退款
 退款请参考OrderService中的refund方法
+
+## 演示截图
+### 支付设置
+<p align="center">
+    <img src="https://www.dedemao.com/uploads/payjs-config.png">
+</p>
+
+### 订单列表
+<p align="center">
+    <img src="https://www.dedemao.com/uploads/payjs-order.png">
+</p>
