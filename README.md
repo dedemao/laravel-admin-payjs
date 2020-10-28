@@ -54,5 +54,5 @@ http://yourname/index?out_trade_no=123456&total_fee=0.01&subject=测试&pay_chan
 
 ### 订单列表
 <p align="center">
-    <img src="https://www.dedemao.com/uploads/payjs-order.png">
+    <img src="https://www.dedemao.com/uploads/payjs-orders.png">
 </p>
