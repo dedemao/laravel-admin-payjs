@@ -43,16 +43,11 @@ class PayjsServiceProvider extends ServiceProvider
             $this->loadRoutesFrom($routes);
         }
 
-        if ($this->app->runningInConsole() && $assets = $extension->assets()) {
-            $this->publishes(
-                [
-                    __DIR__.'/../database' => database_path(),
-                    __DIR__.'/../routes' => base_path('routes'),
-                    $assets => public_path('vendor/dedemao/laravel-admin-payjs')
-                ],
-                'laravel-admin-payjs'
-            );
-
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../database' => database_path(),
+                __DIR__.'/../routes' => base_path('routes'),
+            ],'laravel-admin-payjs');
         }
     }
 }

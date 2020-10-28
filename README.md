@@ -1,16 +1,15 @@
 适用于laravel admin的payjs支付插件
 ======
-## 安装
+## 前提
+已安装好laravel及laravel admin
 
-前提：已安装好laravel及laravel admin
+## 安装
 
 ```
 composer require dedemao/laravel-admin-payjs
-php artisan vendor:publish --provider=Dedemao\Payjs\PayjsServiceProvider
 php artisan payjs:install -m
 ````
-
-安装后，后台将自动生成payjs相关菜单，填写好配置信息后，即可使用。
+执行以上命令后，将自动创建数据库表、自动生成后台相关菜单等，登录后台填写相关配置信息即可使用。
 
 ## 卸载
 ```
@@ -31,6 +30,12 @@ http://yourname/pay/index?total_fee=0.01&subject=测试
 
 指定支付通道：
 http://yourname/pay/index?total_fee=0.01&pay_channel=weixin
+
+指定使用JSAPI支付
+http://yourname/pay/index?total_fee=0.01&pay_mode=jsapi
+
+指定使用收银台支付
+http://yourname/pay/index?total_fee=0.01&pay_mode=cashier
 
 全都指定：
 http://yourname/index?out_trade_no=123456&total_fee=0.01&subject=测试&pay_channel=weixin

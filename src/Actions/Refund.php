@@ -12,7 +12,7 @@ class Refund extends RowAction
 
     public function form(Model $model)
     {
-        $this->text('total_fee', '退款金额（元）')->default($model->total_fee)->rules('required');
+        $this->text('total_fee', '退款金额（元）')->default($model->total_fee)->readonly()->rules('required');
     }
 
     public function handle(Model $model, Request $request)

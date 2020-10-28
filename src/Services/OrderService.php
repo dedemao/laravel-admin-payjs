@@ -90,10 +90,11 @@ class OrderService
     public function unify(array $data)
     {
         //添加订单记录
-        $order['out_trade_no'] = $data['out_trade_no'] ?: $this->outTradeNo();
-        $order['subject'] = $data['subject'] ?: '订单号：' . $data['out_trade_no'];
+        $order['out_trade_no'] = $data['out_trade_no'] ?? $this->outTradeNo();
+        $order['subject'] = $data['subject'] ?? '订单号：' . $data['out_trade_no'];
         $order['total_fee'] = $data['total_fee'] ? floatval($data['total_fee']) : 0.01;
-        $order['type'] = $data['type'] ?: 'weixin';
+        $order['type'] = $data['type'] ?? 'weixin';
+        $order['outer_tid'] = $data['outer_tid'] ?? '';
         return $this->create($order);
     }
 
