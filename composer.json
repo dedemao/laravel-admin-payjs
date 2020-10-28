@@ -1,0 +1,36 @@
+{
+    "name": "dedemao/laravel-admin-payjs",
+    "description": "适用于laravel-admin的payjs支付插件",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/dedemao/laravel-admin-payjs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dedemao",
+            "email": "884358@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dedemao\\Payjs\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dedemao\\Payjs\\PayjsServiceProvider"
+            ]
+        }
+    }
+}
