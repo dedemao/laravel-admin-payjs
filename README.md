@@ -23,7 +23,7 @@ php artisan payjs:uninstall -m
 http://yourname/pay/index?total_fee=0.01
 
 指定订单号：
-http://yourname/pay/index?total_fee=0.01out_trade_no=123456
+http://yourname/pay/index?total_fee=0.01&out_trade_no=123456
 
 指定订单标题：
 http://yourname/pay/index?total_fee=0.01&subject=测试
