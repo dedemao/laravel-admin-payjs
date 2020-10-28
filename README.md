@@ -22,12 +22,16 @@ php artisan payjs:uninstall -m
 ### 如何支付
 指定订单金额：
 http://yourname/pay/index?total_fee=0.01
+
 指定订单号：
 http://yourname/pay/index?total_fee=0.01out_trade_no=123456
+
 指定订单标题：
 http://yourname/pay/index?total_fee=0.01&subject=测试
+
 指定支付通道：
 http://yourname/pay/index?total_fee=0.01&pay_channel=weixin
+
 全都指定：
 http://yourname/index?out_trade_no=123456&total_fee=0.01&subject=测试&pay_channel=weixin
 
